@@ -10,7 +10,7 @@ import pageobjects.CartPage;
 import pageobjects.CheckOutPage;
 
 public class CartSteps extends SetupDriver{
-	@Given("user logs in the website and addts products to cart then press the cartt btn")
+	@Given("user on cart page")
 	public void user_logs_in_the_website_and_addts_products_to_cart_then_press_the_cartt_btn() {
 		CartPage cartPage = new CartPage();
 		cartPage.cartNavigationWithItemds();
@@ -31,7 +31,7 @@ public class CartSteps extends SetupDriver{
 	}
 
 
-	@When("user press the remove product btn")
+	@When("user remove product")
 	public void user_press_the_remove_product_btn() {
 		CartPage cartPage = new CartPage();
 		int c = driver.findElements(cartPage.remove_btn).size();
@@ -53,7 +53,7 @@ public class CartSteps extends SetupDriver{
 	}
 
 
-	@When("user press the checkout btn")
+	@When("user presses checkout")
 	public void user_press_the_checkout_btn() {
 		CartPage cartPage = new CartPage();
 		driver.findElement(cartPage.checkout_btn).click();

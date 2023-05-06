@@ -9,7 +9,7 @@ import pageobjects.CompleteCheckOutPreview;
 import pageobjects.ProductsPage;
 
 public class EndToEnd extends SetupDriver {
-	@When("user presses the cart btn")
+	@When("user presses on cart badge")
 	public void user_presses_the_cart_btn() {
 		ProductsPage productspage=new ProductsPage();
 		driver.findElement(productspage.shoppingcartcontainer).click();

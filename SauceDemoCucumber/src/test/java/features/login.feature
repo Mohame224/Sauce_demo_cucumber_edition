@@ -22,15 +22,15 @@ Feature: Test the login finctionality
 
   Scenario: login with valid credentials
     Given user navigates to website url
-    When user provides correct "standard_user" and "secret_sauce" and clicks login btn
-    Then inventory page should appera
+    When user provides "standard_user" and "secret_sauce" and clicks login btn
+    Then inventory page should appear
 
 
 
   Scenario Outline: login with invalid credentials
     Given user navigates to website url
-    When user provides wrong "<username>" and "<password>" and clicks login btn
-    Then I verify that "<error_message>" appears
+    When user provides "<username>" and "<password>" and clicks login btn
+    Then verify that "<error_message>" appears
 
     Examples: 
       | username      | password     | error_message  |
@@ -48,18 +48,18 @@ Feature: Test the login finctionality
         Scenario: check login ui login btb
     Given user navigates to website url
 
-    Then login btn is displayed
+    Then login button is displayed
     
         Scenario: check login ui username
     Given user navigates to website url
 
-    Then username is displayed
+    Then username field is displayed
     
     
         Scenario: check login ui password
     Given user navigates to website url
 
-    Then password is displayed
+    Then password field is displayed
     
     
  

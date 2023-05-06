@@ -56,7 +56,7 @@ public class MenuSteps extends SetupDriver {
 
 	}
 
-	@And("press reset app state from sidebar")
+	@And("user presses reset app state from sidebar")
 	public void pressOnResetAppState() {
 		MenuPage menupage = new MenuPage();
 		Action ac = new Action(driver);
@@ -66,7 +66,7 @@ public class MenuSteps extends SetupDriver {
 
 	}
 
-	@Then("url navigates to loginpage")
+	@Then("user navigates to loginpage")
 	public void checkNavigationToLoginPage() {
 		SignInPage signinpage = new SignInPage();
 		Action ac = new Action(driver);
@@ -75,14 +75,14 @@ public class MenuSteps extends SetupDriver {
 		Assert.assertTrue(driver.findElement(signinpage.usernam).isDisplayed());
 	}
 
-	@Then("url navigates to about page")
+	@Then("user navigates to about page")
 	public void checkNavigationToAboutPage() {
 		Action ac = new Action(driver);
 		ac.explicitWaitTillElementVisibility(driver.findElement(By.className("css-zgf6by")), 2);
 		Assert.assertTrue(driver.findElement(By.className("css-zgf6by")).isDisplayed());
 	}
 
-	@Then("url navigates to inventory page")
+	@Then("user navigates to inventory page")
 	public void checkNavigationToInventoryPage() {
 		Action ac = new Action(driver);
 		ProductsPage productspage = new ProductsPage();
@@ -121,7 +121,7 @@ public class MenuSteps extends SetupDriver {
 	Assert.assertTrue(driver.findElement(menupage.sidebarallitemslink).isDisplayed());
 	}
 	
-	@Then ("check reset app state link")
+	@Then ("reset app state link appears")
 	public void checkResetStateUI() {
 		MenuPage menupage = new MenuPage();
 		Action ac = new Action(driver);
@@ -130,7 +130,7 @@ public class MenuSteps extends SetupDriver {
 	Assert.assertTrue(driver.findElement(menupage.sidebaraboutlink).isDisplayed());
 	}
 	
-	@Then ("check logout link")
+	@Then ("logout link appears")
 	public void checkLogOutUI() {
 		MenuPage menupage = new MenuPage();
 		Action ac = new Action(driver);
@@ -139,7 +139,7 @@ public class MenuSteps extends SetupDriver {
 	Assert.assertTrue(driver.findElement(menupage.sidebarlogout).isDisplayed());
 	}
 	
-	@Then ("check all items link")
+	@Then ("all items link appears")
 	public void checkAllItemsLinkUI() {
 		MenuPage menupage = new MenuPage();
 		Action ac = new Action(driver);

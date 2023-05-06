@@ -17,7 +17,7 @@ public class LoginSteps extends SetupDriver{
 		sign.navigate();
 	}
 	
-    @When ("user provides correct {string} and {string} and clicks login btn")
+    @When ("user provides {string} and {string} and clicks login btn")
     public void typingCorrectUserNameAndPassword(String name,String password) {
 		SignInPage sign = new SignInPage();
 		sign.typeUserName(name);
@@ -25,7 +25,7 @@ public class LoginSteps extends SetupDriver{
 		sign.clickLogin();
     }
     
-    @When ("user provides wrong {string} and {string} and clicks login btn")
+    @When ("user provides {string} and {string} and clicks login btn")
     	public void typingWrongUserNameAndPassword(String name,String password) {
 		SignInPage sign = new SignInPage();
 		sign.typeUserName(name);
@@ -33,12 +33,12 @@ public class LoginSteps extends SetupDriver{
 		sign.clickLogin();
     }
     
-    @Then ("inventory page should appera")
+    @Then ("inventory page should appear")
     public void checkInventoryPage() {
     	ProductsPage productspage=new ProductsPage();
 		Assert.assertTrue(driver.findElement(productspage.products).isDisplayed());
     }
-    @Then ("I verify that {string} appears")
+    @Then ("verify that {string} appears")
     public void chechErrorMessage(String errormsg) {
 		SignInPage sign = new SignInPage();
 		Assert.assertEquals(errormsg, driver.findElement(sign.errormsg).getText());
@@ -52,14 +52,14 @@ public class LoginSteps extends SetupDriver{
     }
     
     
-    @Then ("login btn is displayed")
+    @Then ("login button is displayed")
     public void chechLoginBtn( ) {
 		SignInPage sign = new SignInPage();
 		Assert.assertTrue(driver.findElement(sign.login_btn).isDisplayed());
     }
     
     
-    @Then ("username is displayed")
+    @Then ("username field is displayed")
     public void chechUserNameField( ) {
 		SignInPage sign = new SignInPage();
 		Assert.assertTrue(driver.findElement(sign.usernam).isDisplayed());
@@ -67,7 +67,7 @@ public class LoginSteps extends SetupDriver{
     
     
     
-    @Then ("password is displayed")
+    @Then ("password field is displayed")
     public void chechPasswordField() {
 		SignInPage sign = new SignInPage();
 		Assert.assertTrue(driver.findElement(sign.pass).isDisplayed());

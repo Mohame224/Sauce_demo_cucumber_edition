@@ -56,7 +56,7 @@ public class ProductSteps extends SetupDriver {
 		select.selectByValue("hilo");
 	}
 
-	@When("user clicks on product names then back")
+	@When("user clicks on product names then navigates back")
 	public void clickOnProductNamesThenBack() {
 		ProductsPage page = new ProductsPage();
 		Action ac = new Action(driver);

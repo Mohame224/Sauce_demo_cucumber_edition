@@ -25,7 +25,7 @@ Feature: test inventory and in item pages
 
 	Scenario: test the product name click buttons
 		Given user navigate to inventory page
-		When user clicks on product names then back
+		When user clicks on product names then navigates back
 		Then user should be navigated to the inventory page
 
 	Scenario: test the add to cart and remove buttons in products

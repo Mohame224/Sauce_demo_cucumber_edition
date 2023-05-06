@@ -11,7 +11,7 @@ import pageobjects.CompleteCheckOutPreview;
 import pageobjects.ProductsPage;
 
 public class CompleteCheckOutSteps  extends SetupDriver{
-	@Given("user logs in to the website and add products to cart then proceeds to check out and fills his info then presses continue then continue")
+	@Given("user in order completion page")
 	public void user_logs_in_to_the_website_and_add_products_to_cart_then_proceeds_to_check_out() {
 
 

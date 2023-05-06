@@ -11,7 +11,7 @@ import pageobjects.CheckOutPage;
 import pageobjects.CheckOutPreviewPage;
 
 public class CheckOutSteps extends SetupDriver {
-	@Given("user logs to the website and add items to the cart then navigate to cart and presses checkout")
+	@Given("user navigate to checkout with items in cart")
 	public void user_logs_to_the_website_and_add_items_to_the_cart_then_navigate_to_cart_and_presses_checkout() {
 		CartPage cartpage = new CartPage();
 		cartpage.cartNavigationWithItemds();
@@ -20,7 +20,7 @@ public class CheckOutSteps extends SetupDriver {
 
 
 
-	@When("user presses the cancel btn")
+	@When("user cancel order")
 	public void user_fills_all_info_then_presses_the_cancel_btn() {
 		CheckOutPage checkoutpage = new CheckOutPage();
 		checkoutpage.pressCancel();
@@ -37,7 +37,7 @@ public class CheckOutSteps extends SetupDriver {
 
 
 
-	@When("user fills all info then presses the continue btn")
+	@When("user fills all info then presses continue")
 	public void user_fills_all_info_then_presses_the_continue_btn() {
 		CheckOutPage checkoutpage = new CheckOutPage();
 		checkoutpage.typeFirstName("fdx");
